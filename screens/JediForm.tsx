@@ -8,15 +8,14 @@ import { theme } from '../core/theme'
 import onLaunch from '../helpers/JediFormHelper'
 import Tts from "react-native-tts";
 
-Tts.setDefaultLanguage('en-GB')
-Tts.setDefaultVoice('com.apple.ttsbundle.Daniel-compact')
-
 export default function JediForm({ navigation }) {
   const [jediName, setJediName] = useState({ value: '', error: '' })
   const [spaceShipName, setSpaceshipName] = useState({ value: '', error: '' })
 
   const onLoginPressed = () => {
     // onLaunch(jediName.value, spaceShipName.value)
+    Tts.setDefaultLanguage('en-GB')
+    Tts.setDefaultVoice('com.apple.ttsbundle.Daniel-compact')
     Tts.speak('Hello World!')
   }
 
