@@ -35,14 +35,8 @@ export default function JediForm({ navigation }) {
         errorText='Erro ao preencher o nome da sua nave'
         description='Nome da Nave'      />
       <Button mode="contained" onPress={onLoginPressed} style={undefined}>
-        Login
+        Chamar piloto
       </Button>
-      <View style={styles.row}>
-        <Text>Don’t have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.replace('RegisterScreen')}>
-          <Text style={styles.link}>Sign up</Text>
-        </TouchableOpacity>
-      </View>
     </Background>
   )
 }
